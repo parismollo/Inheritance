@@ -81,11 +81,17 @@ class Mediatheque{
 		System.out.println("\n---Exercice 5---");
 		EstUnLivre checker = new EstUnLivre();
 		System.out.println(checker.estVrai(manga));
-		Media livre2 = new Livre("DaVinci", "Leonardo", 500);
+		Media livre2 = new Livre("SaVinci", "Leonardo", 500);
+		mediatheque.ajouter(livre2);
 		System.out.println(checker.estVrai(livre2));	
 		System.out.println(checker.estVrai(dict_bi));
 
 		System.out.println(mediatheque.recherche(checker));
+
+		TitreCommencePar tcp = new TitreCommencePar('n');
+		System.out.println(mediatheque.recherche(tcp));
+		Et et = new Et(new TitreCommencePar('s'), new EstUnLivre());
+		System.out.println(mediatheque.recherche(et));
 
 	}
 }
